@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    namespace 'com.example.gpslogger'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.gpslogger"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.itextpdf:itextg:5.5.10'
+}
