@@ -1,0 +1,5 @@
+- name: Upload APK
+  uses: actions/upload-artifact@8c16447be6a64b91897d2f57cb6bffb6c9423ecf
+  with:
+    name: app-debug.apk
+    path: app/build/outputs/apk/debug/app-debug.apk
