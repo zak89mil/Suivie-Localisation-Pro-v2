@@ -4,11 +4,11 @@ workflows:
     name: Build Android APK
     max_build_duration: 15
     environment:
-      android:
-        image: latest
-      java: 11
+      vars:
+        JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
     scripts:
-      - echo "Building Android APK..."
+      - echo "Building APK..."
+      - chmod +x ./gradlew
       - ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
