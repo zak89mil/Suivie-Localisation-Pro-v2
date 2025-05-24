@@ -1,0 +1,21 @@
+
+workflows:
+  android-app:
+    name: Build Android APK
+    max_build_duration: 15
+    environment:
+      android:
+        image: latest
+      java: 11
+    scripts:
+      - echo "Building Android APK..."
+      - ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
