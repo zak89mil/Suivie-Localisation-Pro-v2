@@ -1,1 +1,1 @@
-REPLACED_BY_NEXT_STEP
+// MainActivity.kt placeholder (should paste code from canvas here)
